@@ -70,21 +70,38 @@ section{
 
 .shop-content{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-   
-
+    padding: 4rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 5%;
 }
 
 .shop-title{
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-.img-product{
-    width: 220px;
+
+.product-box{
+    position: relative;
 }
+
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--dark2);
+    transition: 0.4s;
+
+}
+
+.product-box img{
+    width: 300px;
+}
+
+
 
 
 
