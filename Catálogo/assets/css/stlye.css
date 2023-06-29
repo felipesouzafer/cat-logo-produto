@@ -27,6 +27,68 @@ body{
     color: var(--dark1);
 }
 
-img{
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.container{
+    max-width: 1068px;
+    margin: auto;
     width: 100%;
 }
+
+.logo{
+    font-size: 1.1rem;
+    color: var(--dark1);
+    font-weight: 400;
+}
+
+#icon{
+    width: 12px;
+    cursor: pointer;
+}
+
+section{
+    padding: 4rem 0 3rem;
+}
+
+.shop{
+    margin-top: 2rem;
+}
+
+.shop-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+   
+
+}
+
+.shop-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.img-product{
+    width: 220px;
+}
+
+
+
+
+
+
+
