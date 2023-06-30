@@ -40,18 +40,26 @@ function removeCartItem(event){
     updatetotal();
 }
 
+function quantityChanged(event){
+        var input = event.target
+        if(isNaN(input.value) || input.value <= 0){
+        input.value = 1;
+}
+    updatetotal();
+}
+
 function updatetotal(){
     var carContent = document.getElementsByClassName("cart-content")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var total = 0;
     for (var i = 0; i < cartBoxes.length; i++) {
         var cartBox = cartBox[i];
-        var priceElement = cartBoxes.getElementsByClassName("cart-price")[0];
-        var quantityElement = cartBoxes.getElementsByClassName("cart-quant")[0];
+        var priceElement = cartBox.getElementsByClassName("cart-price")[0];
+        var quantityElement = cartBox.getElementsByClassName("cart-quant")[0];
         var price = parseFloat(priceElement.innerText.repleace("$", ""));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
 
-        document.getElementsByClassName('total-price')[0].innerHTML = "$" + total;
+        document.getElementsByClassName("total-price")[0].innerHTML = "$" + total;
     }
 }
