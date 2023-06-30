@@ -48,8 +48,30 @@ function quantityChanged(event){
     updatetotal();
 }
 
+
+function addCartClicked(event){
+    var button = event.target
+    var shopProducts = button.parentElement
+    var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
+    var price = shopProducts.getElementsByClassName('price')[0].innerText;
+    var productImg = shopProducts.getElementsByClassName('product-img')[0].src;
+    var shopProducts = button.parentElement
+    addProductToCart(title, price, productImg);
+    updatetotal();
+}
+
+
+function  addProductToCart (title, price, productImg){
+    var cartShopBox = document.createElement('div')
+    //cartShopBox.classList.add('cart-box')
+    var cartItem
+}
+
+
+
+
 function updatetotal(){
-    var carContent = document.getElementsByClassName("cart-content")[0];
+    var cartContent = document.getElementsByClassName("cart-content")[0];
     var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var total = 0;
     for (var i = 0; i < cartBoxes.length; i++) {
