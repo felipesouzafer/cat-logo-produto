@@ -26,18 +26,32 @@ function ready(){
         var button = removeCartButtons[i]
         button.addEventListener('click', removeCartItem)
     }
+
+    var quantityInputs = document.getElementsByClassName('cart-quant')
+    for (var i = 0; i < quantityInputs.length; i++){
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged);
+    }
 }
 
 function removeCartItem(event){
     var buttonClicked = event.target
     buttonClicked.parentElement.remove();
+    updatetotal();
 }
 
 function updatetotal(){
     var carContent = document.getElementsByClassName("cart-content")[0];
-    var cartBoxes = carContent.getElementsByClassName("cart-box");
+    var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var total = 0;
     for (var i = 0; i < cartBoxes.length; i++) {
-        var cartBox
+        var cartBox = cartBox[i];
+        var priceElement = cartBoxes.getElementsByClassName("cart-price")[0];
+        var quantityElement = cartBoxes.getElementsByClassName("cart-quant")[0];
+        var price = parseFloat(priceElement.innerText.repleace("$", ""));
+        var quantity = quantityElement.value;
+        total = total + (price * quantity);
+
+        document.getElementsByClassName('total-price')[0].innerHTML = "$" + total;
     }
 }
