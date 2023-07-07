@@ -1,7 +1,11 @@
+
+// Varáveis
+
 let cartIcon = document.querySelector('#icon')
 let cart = document.querySelector('.cart')
 let closeCart = document.querySelector('#close-cart')
 
+// Função de clicar
 
 cartIcon.onclick = () =>{
     cart.classList.add("active");
@@ -18,6 +22,9 @@ if(document.readyState == 'loading'){
 } else{
     ready();
 }
+
+// Função de remover produto e de quantidade 
+
 
 function ready(){
     var removeCartButtons = document.getElementsByClassName('cart-remove')
@@ -48,6 +55,7 @@ function quantityChanged(event){
     updatetotal();
 }
 
+// Função de adicionar produto
 
 function addCartClicked(event){
     var button = event.target
@@ -91,7 +99,7 @@ var cartBoxContent = `
 
 
 
-
+// Função de update ao produto
 
 function updatetotal(){
     var cartContent = document.getElementsByClassName("cart-content")[0];

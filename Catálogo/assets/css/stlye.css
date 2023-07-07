@@ -12,6 +12,7 @@
     text-decoration: none;
 }
 
+/* Cores usadas no Catálogi*/
 
 :root{
     --white: #FFF;
@@ -26,6 +27,8 @@ body{
     font-family: 'Mukta';
     color: var(--dark1);
 }
+
+/* Menu */
 
 header{
     position: fixed;
@@ -84,6 +87,8 @@ header{
     width: 12px;
     cursor: pointer;
 }
+
+/* Style do Catálogo dos Produtos*/
 
 section{
     padding: 4rem 0 3rem;
@@ -151,6 +156,9 @@ section{
 .icon:hover{
     background-color: var(--purple1);
 }
+
+
+/* Style do Meu Carrinho*/
 
 .cart-box{
     display: grid;
